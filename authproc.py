@@ -73,7 +73,7 @@ def accesscomm_withdraw(connection, username, attempt):
 # Input/Output users credentials, validations
 # ------------------------------------------------------------------------------------------#
 # Hash/Salt and add record to DB
-accesscomm_record(establish_accesscomm(),"Username123",hash_key(zest_key(), 'Password45'))
+#accesscomm_record(establish_accesscomm(),"Username123",hash_key(zest_key(), 'Password45'))
 
 # Check if username, password is valid
 accesscomm_withdraw(establish_accesscomm(), "Username123", "Password45") #True
