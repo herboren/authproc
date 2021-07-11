@@ -35,7 +35,7 @@ def check_key(stored_password, attempt):
 # ------------------------------------------------------------------------------------------#
 def establish_accesscomm():
     """ Establish communication to accessdb """
-    connection = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)}; DBQ=C:\Users\Daddy\Desktop\acctmgmt.accdb;')        
+    connection = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)}; DBQ=X:\acctmgmt.accdb;')        
     return connection
 # ------------------------------------------------------------------------------------------#
 # Read/Write DB Records
