@@ -35,7 +35,7 @@ def check_key(stored_password, attempt):
 # ------------------------------------------------------------------------------------------#
 def establish_accesscomm():
     """ Establish communication to accessdb """
-    connection = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)}; DBQ=X:\acctmgmt.accdb;')        
+    connection = pyodbc.connect(r'Driver={Microsoft Access Driver (*.mdb, *.accdb)}; DBQ=C:\Users\Daddy\Desktop\acctmgmt.accdb;')        
     return connection
 # ------------------------------------------------------------------------------------------#
 # Read/Write DB Records
@@ -75,6 +75,6 @@ def accesscomm_withdraw(connection, username, attempt):
 # Hash/Salt and add record to DB
 accesscomm_record(establish_accesscomm(),"Username123",hash_key(zest_key(), 'Password45'))
 
-# Check if username, password is valid
+# Check if username, password is valid, read record
 accesscomm_withdraw(establish_accesscomm(), "Username123", "Password45") #True
 accesscomm_withdraw(establish_accesscomm(), "Username54", "Password45")  #Flase
